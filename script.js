@@ -3,5 +3,8 @@ $(document).ready(function(){
 		$('#AlertHome').hover(function(){
 			
 		})
+		$('headerRegLog').hover(function()){
+			
+		)}
 	})
 });
