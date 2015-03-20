@@ -58,9 +58,10 @@
 	border-radius: 4px;
 	margin: 5px 2px 5px 2px;
 	display: inline-block;
+	cursor: pointer;
 }
 
-#subHeaderAlertHome{
+#AlertHome{
 	display: inline-block;
 	margin: 6px 0px 0px 0px;
 	float: right;
@@ -69,7 +70,7 @@
 	cursor: pointer;
 }
 
-#subHeaderAlertInformation{
+#AlertInformation{
 	display: inline-block;
 	margin: 6px 0px 0px 0px;
 	float: right;
@@ -78,7 +79,7 @@
 	cursor: pointer;
 }
 
-#subHeaderAlertProjects{
+#AlertProjects{
 	display: inline-block;
 	margin: 6px 0px 0px 0px;
 	float: right;
@@ -87,7 +88,7 @@
 	cursor: pointer;
 }
 
-#subHeaderAlertAboutUs{
+#AlertAboutUs{
 	display: inline-block;
 	margin: 6px 0px 0px 0px;
 	float: right;
@@ -103,7 +104,6 @@
 	text-align: left;
 	font-size: 24px;
 	padding: 18px 0px 0px 0px;
-	
 }
 
 .textStyle2{
