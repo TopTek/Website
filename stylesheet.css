@@ -1,11 +1,24 @@
 
 *{
-	/*border:1px dashed blue;*/
+	/*border:1px dashed blue;
+	/* ^ Only for testing element boxes ^ */
+	margin: 0;
+	padding: 0;
+	cursor: default;
 }
 
+#test{
+	background-color: FF0000;
+	width: 10000px;
+	height: 10000px;
+}
+
+#none{
+	display: none;
+}
 
 #header{
-	background-color: #111112;
+	background-color: #111111;
 	position: fixed;
 	top: -10px;
 	left: 0px;
@@ -16,6 +29,7 @@
 	height:100px;
 	float: left;
 	margin-top: 10px;
+	cursor: pointer;
 }
 
 #headerText{
@@ -28,26 +42,89 @@
 	float: right;
 }
 
+#subHeader{
+	background-color: #333333;
+	position: fixed;
+	top: 100px;
+	left: 0px;
+	width: 100%;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	text-align: center;
+}
+
+#subHeaderBox{
+	background-color: #222222;
+	border-radius: 4px;
+	margin: 5px 2px 5px 2px;
+	display: inline-block;
+}
+
+#subHeaderAlertHome{
+	display: inline-block;
+	margin: 6px 0px 0px 0px;
+	float: right;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
+#subHeaderAlertInformation{
+	display: inline-block;
+	margin: 6px 0px 0px 0px;
+	float: right;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
+#subHeaderAlertProjects{
+	display: inline-block;
+	margin: 6px 0px 0px 0px;
+	float: right;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
+#subHeaderAlertAboutUs{
+	display: inline-block;
+	margin: 6px 0px 0px 0px;
+	float: right;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
 .textStyle1{
 	color: #ccccff;
 	font-family: Verdana;
 	font-weight: bold;
 	text-align: left;
 	font-size: 24px;
+	padding: 18px 0px 0px 0px;
+	
 }
 
 .textStyle2{
 	display: inline-block;
-	padding: 5px;
+	padding: 6px;
+	margin: 10px 10px 10px 10px;
 	color: #ccccff;
 	font-family: Verdana;
 	font-weight: bold;
 	text-align: center;
 	font-size: 16px;
+	cursor: pointer;
 }
 
-#test{
-	background-color: FF0000;
-	width: 10000px;
-	height: 10000px;
+.textStyle3{
+	float: left;
+	padding: 6px;
+	color: #ccccff;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+	cursor: pointer;
 }

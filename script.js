@@ -1,3 +1,7 @@
-$(document).ready(function(){ 
-	$('div').css('cursor', 'pointer');
+$(document).ready(function(){
+	$('div').hover(function(){
+		$('#subHeaderAlert').hover(function(){
+			
+		})
+	})
 });
