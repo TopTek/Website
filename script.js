@@ -1,6 +1,10 @@
 $(document).ready(function(){
 	
+	var websiteUPS=60;
+	
 	var subHeaderHidden=1;
+	var subHeaderAnimTime=0;
+	var subHeaderHideSpeed=350;
 	
 	/*$('#subHeader').hover(function(){
 		if(subHeaderHidden){
@@ -14,21 +18,33 @@ $(document).ready(function(){
 	}) */
 	
 	$('#subHeader').mouseenter(function(){
-			subHeaderHidden=2;
+		subHeaderHidden=2;
 	})
 	$('#subHeader').mouseleave(function(){
-			subHeaderHidden=0;
+		subHeaderHidden=0;
+	})
+	$('#header').mouseenter(function(){
+		subHeaderHidden=2;
 	})
 	
+	function subHeaderUpdate(){
+		if(subHeaderHidden===0 && subHeaderAnimTime==0){
+			$('#subHeader').animate({top: '58px'}, subHeaderHideSpeed);
+			subHeaderHidden=1;
+			subHeaderAnimTime=subHeaderHideSpeed;
+		}
+		if(subHeaderHidden===2 && subHeaderAnimTime==0){
+			$('#subHeader').animate({top: '98px'}, subHeaderHideSpeed);
+			subHeaderHidden=1;
+			subHeaderAnimTime=subHeaderHideSpeed;
+		}
+		if(subHeaderAnimTime > 0) subHeaderAnimTime-=(1000/websiteUPS)
+		if(subHeaderAnimTime < 0) subHeaderAnimTime=0;
+	}
+	
 	function update(){
-		if(subHeaderHidden===0){
-			$('#subHeader').animate({top: '-=40px'}, 500);
-			subHeaderHidden=1;
-		}
-		if(subHeaderHidden===2){
-			$('#subHeader').animate({top: '+=40px'}, 500);
-			subHeaderHidden=1;
-		}
+		subHeaderUpdate();
+		
 	}
 	
 	function run(){
