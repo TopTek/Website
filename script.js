@@ -6,17 +6,6 @@ $(document).ready(function(){
 	var subHeaderAnimTime=0;
 	var subHeaderHideSpeed=350;
 	
-	/*$('#subHeader').hover(function(){
-		if(subHeaderHidden){
-			$('#subHeader').animate({top: '+=42px'}, 500);
-			subHeaderHidden=false;
-		}else{
-			$('#subHeader').animate({top: '-=42px'}, 500);
-			subHeaderHidden=true;
-		}
-		console.log(subHeaderHidden);
-	}) */
-	
 	$('#subHeader').mouseenter(function(){
 		subHeaderHidden=2;
 	})
