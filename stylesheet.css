@@ -7,12 +7,6 @@
 	cursor: default;
 }
 
-#test{
-	background-color: FF0000;
-	width: 10000px;
-	height: 10000px;
-}
-
 #none{
 	display: none;
 }
@@ -95,6 +89,21 @@
 	height: 24px;
 	width: 24px;
 	cursor: pointer;
+}
+
+#background{
+	background-color: #aaaaaa;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+}
+
+#home{
+	background-color: #a0a0a0;
+	height: 100%;
+	width: 80%;
+	position: fixed;
 }
 
 .textStyle1{
