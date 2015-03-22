@@ -8,7 +8,6 @@ $(document).ready(function(){
 	//1 = Information
 	//2 = Projects
 	//3 = About Us
-	var goToPage=0;
 	var currentPage=0;
 	var homePosition=0;
 	var informationPosition=110;
@@ -79,27 +78,15 @@ $(document).ready(function(){
 	
 	//Updates the page positions
 	function pagePositions(){
-		//if(currentPage>goToPage && pageAnimTime===0) currentPage--;
-		//if(currentPage<goToPage && pageAnimTime===0) currentPage++;
 		
 		if(currentPage===0){
-			/* homePosition=10;
-			informationPosition=110;
-			projectsPosition=110;
-			aboutUsPosition=110; */
-			
 			homePosition=10;
 			informationPosition=110;
 			projectsPosition=220;
 			aboutUsPosition=330;
 		}
 		
-		if(currentPage===1){
-			/* homePosition= -110;
-			informationPosition=10;
-			projectsPosition=110;
-			aboutUsPosition=110; */
-			
+		if(currentPage===1){		
 			homePosition= -110;
 			informationPosition=10;
 			projectsPosition=110;
@@ -107,11 +94,6 @@ $(document).ready(function(){
 		}
 		
 		if(currentPage===2){
-			/* homePosition= -110;
-			informationPosition= -110;
-			projectsPosition=10;
-			aboutUsPosition=110; */
-			
 			homePosition= -220;
 			informationPosition= -110;
 			projectsPosition=10;
@@ -119,11 +101,6 @@ $(document).ready(function(){
 		}
 		
 		if(currentPage===3){
-			/* homePosition= -110;
-			informationPosition= -110;
-			projectsPosition= -110;
-			aboutUsPosition=10; */
-			
 			homePosition= -330;
 			informationPosition= -220;
 			projectsPosition= -110;
@@ -140,8 +117,6 @@ $(document).ready(function(){
 		}
 		if(pageAnimTime > 0) pageAnimTime-=(1000/websiteUPS)
 		if(pageAnimTime < 0) pageAnimTime=0;
-		//if(currentPage===goToPage)pageAnimate=false;
-		console.log(goToPage + " | " + currentPage + " | " + pageAnimTime + " | " + pageAnimate);
 	}
 	
 	//Updates the website for javascript functions to work correctly
