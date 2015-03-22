@@ -55,7 +55,7 @@
 	cursor: pointer;
 }
 
-#AlertHome{
+#AlertIcon{
 	display: inline-block;
 	margin: 6px 0px 0px 0px;
 	float: right;
@@ -64,46 +64,51 @@
 	cursor: pointer;
 }
 
-#AlertInformation{
-	display: inline-block;
-	margin: 6px 0px 0px 0px;
-	float: right;
-	height: 24px;
-	width: 24px;
-	cursor: pointer;
-}
+#subHeaderHomeButton{}
 
-#AlertProjects{
-	display: inline-block;
-	margin: 6px 0px 0px 0px;
-	float: right;
-	height: 24px;
-	width: 24px;
-	cursor: pointer;
-}
+#subHeaderInformationButton{}
 
-#AlertAboutUs{
-	display: inline-block;
-	margin: 6px 0px 0px 0px;
-	float: right;
-	height: 24px;
-	width: 24px;
-	cursor: pointer;
-}
+#subHeaderProjectsButton{}
+
+#subHeaderAboutUsButton{}
 
 #background{
-	background-color: #aaaaaa;
+	background-color: #3333ff;
 	height: 100%;
 	width: 100%;
-	text-align: center;
 	position: fixed;
 }
 
 #home{
-	background-color: #a0a0a0;
+	background-color: #909090;
 	height: 100%;
 	width: 80%;
 	position: fixed;
+	left: 10%;
+}
+
+#information{
+	background-color: #ff9090;
+	height: 100%;
+	width: 80%;
+	position: fixed;
+	left: 110%;
+}
+
+#projects{
+	background-color: #90ff90;
+	height: 100%;
+	width: 80%;
+	position: fixed;
+	left: 220%;
+}
+
+#aboutUs{
+	background-color: #9090ff;
+	height: 100%;
+	width: 80%;
+	position: fixed;
+	left: 330%;
 }
 
 #footer{
