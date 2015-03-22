@@ -1,9 +1,165 @@
-#icon{
+
+*{
+	/*border:1px dashed blue;
+	/* ^ Only for testing element boxes ^ */
+	margin: 0;
+	padding: 0;
+	cursor: default;
+}
+
+#none{
+	display: none;
+}
+
+#header{
+	background-color: #111111;
+	position: fixed;
+	top: -10px;
+	left: 0px;
+	width: 100%;
+}
+#headerIcon{
 	width: 100px;
 	height: 100px;
+	float: left;
+	margin-top: 10px;
+	cursor: pointer;
 }
-.pullDown{
-	background-color: #ff0000;
-	width:100px;
-	height:75px;
+
+#headerText{
+	display: inline-block;
+	float: left;
+}
+
+#headerRegLog{
+	display: inline-block;
+	float: right;
+}
+
+#subHeader{
+	background-color: #333333;
+	position: fixed;
+	top: 58px;
+	left: 0px;
+	width: 100%;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	text-align: center;
+}
+
+#subHeaderBox{
+	background-color: #222222;
+	border-radius: 4px;
+	margin: 6px 2px 10px 2px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+#AlertHome{
+	display: inline-block;
+	margin: 6px 0px 0px 0px;
+	float: right;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
+#AlertInformation{
+	display: inline-block;
+	margin: 6px 0px 0px 0px;
+	float: right;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
+#AlertProjects{
+	display: inline-block;
+	margin: 6px 0px 0px 0px;
+	float: right;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
+#AlertAboutUs{
+	display: inline-block;
+	margin: 6px 0px 0px 0px;
+	float: right;
+	height: 24px;
+	width: 24px;
+	cursor: pointer;
+}
+
+#background{
+	background-color: #aaaaaa;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	position: fixed;
+}
+
+#home{
+	background-color: #a0a0a0;
+	height: 100%;
+	width: 80%;
+	position: fixed;
+}
+
+.textStyle1{
+	color: #ccccff;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: left;
+	font-size: 24px;
+	padding: 18px 0px 0px 0px;
+}
+
+.textStyle2{
+
+	display: inline-block;
+	padding: 6px;
+	margin: 10px 10px 10px 10px;
+	color: #ccccff;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+/* Changes the color of the register and login button when moused over.*/
+.textStyle2:hover{
+	display: inline-block;
+	padding: 6px;
+	margin: 10px 10px 10px 10px;
+	color: 6969FF;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+
+}
+
+.textStyle3{
+	float: left;
+	padding: 6px;
+	color: #ccccff;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+	cursor: pointer;
+}
+/*Same as style 2 hover*/
+.textStyle3:hover{
+	float: left;
+	padding: 6px;
+	color: #ccccff;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+	cursor: pointer;
+	color: 6969FF;
 }
