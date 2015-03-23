@@ -79,12 +79,20 @@
 	position: fixed;
 }
 
+#pageForeground{
+	background-color: #a0a0a0;
+	margin: 0 10px 0 10px;
+	height: 100%;
+	position: absolute;
+	
+}
+
 #pageBlock{
 	height: 120px;
 }
 
 #home{
-	background-color: #909090;
+	background-color: #707070;
 	height: 100%;
 	width: 80%;
 	position: fixed;
