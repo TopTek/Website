@@ -79,6 +79,10 @@
 	position: fixed;
 }
 
+#pageBlock{
+	height: 120px;
+}
+
 #home{
 	background-color: #909090;
 	height: 100%;
@@ -87,16 +91,27 @@
 	left: 10%;
 }
 
+/*--- Information Page's Ids and Classes' ---*/
 #information{
-	background-color: #ff9090;
+	background-color: #909090;
 	height: 100%;
 	width: 80%;
 	position: fixed;
 	left: 110%;
 }
 
+#informationTitle{
+
+}
+
+#calendar{
+	padding: 6px;
+	width: 100%;
+}
+
+/*--- Projects Page's Ids and Classes' ---*/
 #projects{
-	background-color: #90ff90;
+	background-color: #909090;
 	height: 100%;
 	width: 80%;
 	position: fixed;
@@ -104,7 +119,7 @@
 }
 
 #aboutUs{
-	background-color: #9090ff;
+	background-color: #909090;
 	height: 100%;
 	width: 80%;
 	position: fixed;
@@ -179,4 +194,29 @@
 	font-size: 20px;
 	cursor: pointer;
 	color: 6969FF;
+}
+.textStyle4{
+	float: center;
+	padding: 6px;
+	color: #111111;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 24px;
+}
+.textStyle5{
+	color: #111111;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+	padding: 4px;
+}
+.textStyle6{
+	color: #111111;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: left;
+	font-size: 16px;
+	padding: 4px;
 }
