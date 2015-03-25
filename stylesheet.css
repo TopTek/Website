@@ -81,10 +81,8 @@
 
 #pageForeground{
 	background-color: #a0a0a0;
-	margin: 0 10px 0 10px;
 	height: 100%;
-	position: absolute;
-	
+	margin: 0px 10px 0px 10px;
 }
 
 #pageBlock{
@@ -94,18 +92,18 @@
 #home{
 	background-color: #707070;
 	height: 100%;
-	width: 80%;
+	width: 100%;
 	position: fixed;
-	left: 10%;
+	left: 0%;
 }
 
 /*--- Information Page's Ids and Classes' ---*/
 #information{
-	background-color: #909090;
+	background-color: #707070;
 	height: 100%;
-	width: 80%;
+	width: 100%;
 	position: fixed;
-	left: 110%;
+	left: 100%;
 }
 
 #informationTitle{
@@ -119,19 +117,19 @@
 
 /*--- Projects Page's Ids and Classes' ---*/
 #projects{
-	background-color: #909090;
+	background-color: #707070;
 	height: 100%;
-	width: 80%;
+	width: 100%;
 	position: fixed;
-	left: 220%;
+	left: 200%;
 }
 
 #aboutUs{
-	background-color: #909090;
+	background-color: #707070;
 	height: 100%;
-	width: 80%;
+	width: 100%;
 	position: fixed;
-	left: 330%;
+	left: 300%;
 }
 
 #footer{

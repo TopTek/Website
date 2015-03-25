@@ -80,31 +80,31 @@ $(document).ready(function(){
 	function pagePositions(){
 		
 		if(currentPage===0){
-			homePosition=10;
-			informationPosition=110;
-			projectsPosition=220;
-			aboutUsPosition=330;
+			homePosition=0;
+			informationPosition=100;
+			projectsPosition=200;
+			aboutUsPosition=300;
 		}
 		
 		if(currentPage===1){		
-			homePosition= -110;
-			informationPosition=10;
-			projectsPosition=110;
-			aboutUsPosition=220;
+			homePosition= -100;
+			informationPosition=0;
+			projectsPosition=100;
+			aboutUsPosition=200;
 		}
 		
 		if(currentPage===2){
-			homePosition= -220;
-			informationPosition= -110;
-			projectsPosition=10;
-			aboutUsPosition=110;
+			homePosition= -200;
+			informationPosition= -100;
+			projectsPosition=0;
+			aboutUsPosition=100;
 		}
 		
 		if(currentPage===3){
-			homePosition= -330;
-			informationPosition= -220;
-			projectsPosition= -110;
-			aboutUsPosition=10;
+			homePosition= -300;
+			informationPosition= -200;
+			projectsPosition= -100;
+			aboutUsPosition=0;
 		}
 		
 		if(pageAnimTime===0 && pageAnimate){
