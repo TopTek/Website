@@ -7,10 +7,14 @@
 	cursor: default;
 }
 
+/*use this when you need somthing to disappear. For examample: if you need
+the reed exclaimation points to disappear because nothing's changed there'*/
+
 #none{
 	display: none;
 }
 
+/*Id for the header (dark bar at the top of the website)*/
 #header{
 	background-color: #111111;
 	position: fixed;
@@ -18,24 +22,26 @@
 	left: 0px;
 	width: 100%;
 }
-#headerIcon{
+/*The ID for the icon in the header*/
+.icon{
 	width: 100px;
 	height: 100px;
 	float: left;
 	margin-top: 10px;
 	cursor: pointer;
 }
-
+/*the Id for the text to the left of the icon*/
 #headerText{
 	display: inline-block;
 	float: left;
 }
-
+/*The Id for the register and login buttons*/
 #headerRegLog{
 	display: inline-block;
 	float: right;
 }
-
+/*the Id for the pull down just below the header
+NOTE: all "subHeader..." are a part within this*/
 #subHeader{
 	background-color: #333333;
 	position: fixed;
@@ -46,7 +52,8 @@
 	border-bottom-left-radius: 15px;
 	text-align: center;
 }
-
+/*This just puts the page name and exclaimation point into the same box
+so that they stay together as one*/
 #subHeaderBox{
 	background-color: #222222;
 	border-radius: 4px;
@@ -54,8 +61,10 @@
 	display: inline-block;
 	cursor: pointer;
 }
-
-#AlertIcon{
+/*This is the red exclaimation point.
+Used when something has changed on that page that people need to know about
+example: we recently found out that computer club was canceled this week*/
+.AlertIcon{
 	display: inline-block;
 	margin: 6px 0px 0px 0px;
 	float: right;
@@ -63,7 +72,7 @@
 	width: 24px;
 	cursor: pointer;
 }
-
+/*The next for are just Ids to help javascript identify each box idividually*/
 #subHeaderHomeButton{}
 
 #subHeaderInformationButton{}
@@ -79,13 +88,13 @@
 	position: fixed;
 }
 
-#pageForeground{
+.pageForeground{
 	background-color: #a0a0a0;
 	height: 100%;
 	margin: 0px 10px 0px 10px;
 }
 
-#pageBlock{
+.pageBlock{
 	height: 120px;
 }
 
@@ -111,8 +120,7 @@
 }
 
 #calendar{
-	padding: 6px;
-	width: 100%;
+	margin: 50px;
 }
 
 /*--- Projects Page's Ids and Classes' ---*/

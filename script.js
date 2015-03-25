@@ -3,34 +3,53 @@ $(document).ready(function(){
 	//Website Updates Per Second. Usually 60;
 	var websiteUPS=60;
 	
+	var currentPage=0;
 	//What page the website is currently on
 	//0 = Home
 	//1 = Information
 	//2 = Projects
 	//3 = About Us
-	var currentPage=0;
+	
 	var homePosition=0;
-	var informationPosition=110;
-	var projectsPosition=110;
-	var aboutUsPosition=110;
+	var informationPosition=100;
+	var projectsPosition=200;
+	var aboutUsPosition=300;
+	//These keeps track of each individual page's position left
+	
+	//These are used for when the page animates or slides back and forth
 	var pageAnimTime=0;
+	//used to countdown when the next time a page can animate right or left
+	//after another page animates
 	var pageAnimSpeed=1000;
+	//the speed that a page animate
 	var pageAnimate=false;
+	//when a page may animate, though nothing to do with pageAnimTime
 	
+	//These are used for when the subHeader animates or slides down or up
 	var subHeaderHidden=1;
+	//If the should hide or pull down
+	//0 = slide up (hide)
+	//1 = stay, don't change
+	//2 = slide down
 	var subHeaderAnimTime=0;
+	//a countdown until the next time it may slide up or down
+	//used to stop a bug where it will go up-down twice in a row when it shouldn't
 	var subHeaderHideSpeed=350;
+	//the speed that it slides up or down
 	
-	
+	//Triggers when the mouse enters the boarder within the subHeader
 	$('#subHeader').mouseenter(function(){
 		subHeaderHidden=2;
 	})
+	//Triggers when the mouse leaves the boarder within the subHeader
 	$('#subHeader').mouseleave(function(){
 		subHeaderHidden=0;
 	})
+	//Triggers when the mouse enters the boarder within the header
 	$('#header').mouseenter(function(){
 		subHeaderHidden=2;
 	})
+	
 	$('#subHeaderHomeButton').click(function(){
 		if(currentPage!=0){
 			currentPage=0;
@@ -135,6 +154,9 @@ $(document).ready(function(){
 	}
 	run();
 });
+//Returns a funciton every x frames per second
+//fps depends on computer and browser
+//usually 60fps. if not, 30fps.
 window.requestAnimFrame = (function(){
 	return window.requestAnimationFrame ||
 	window.webkitRequestAnimationFrame||
