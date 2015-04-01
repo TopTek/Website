@@ -119,8 +119,18 @@ example: we recently found out that computer club was canceled this week*/
 
 }
 
+#calendar-container{
+	text-align:center;
+	margin: 0% auto 0% auto;
+	width: 1600px;
+	height: 900px;
+}
 #calendar{
-	margin: 50px;
+	text-align:center;
+	border: 5px;
+	color: black;
+	width: 1600px;
+	height: 900px;
 }
 
 /*--- Projects Page's Ids and Classes' ---*/
