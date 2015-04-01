@@ -119,12 +119,14 @@ example: we recently found out that computer club was canceled this week*/
 
 }
 
+/*--- Used to center the calendar ---*/
 #calendar-container{
 	text-align:center;
 	margin: 0% auto 0% auto;
 	width: 1600px;
 	height: 900px;
 }
+
 #calendar{
 	text-align:center;
 	border: 5px;
