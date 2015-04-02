@@ -10,7 +10,7 @@
 /*use this when you need somthing to disappear. For examample: if you need
 the red exclaimation points to disappear because nothing's changed there'*/
 
-#none{
+.none{
 	display: none;
 }
 
@@ -122,18 +122,17 @@ example: we recently found out that computer club was canceled this week*/
 /*--- Used to center the calendar ---*/
 #calendar-container{
 	text-align:center;
-	margin: 0% auto 0% auto;
-	border: 5px;
-	border-color: black;
-	width: 1605px;
-	height: 905px;
+	margin: 1%;
+	background-color: #ccccff;
+	border:1px solid black;
 }
 
 #calendar{
+	left: 1%;
+	margin-top:1%;
 	text-align:center;
-	color: black;
-	width: 1600px;
-	height: 900px;
+	width:98%;
+	height: 100%;
 }
 
 /*--- Projects Page's Ids and Classes' ---*/
