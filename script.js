@@ -154,7 +154,7 @@ $(document).ready(function(){
 	}
 	run();
 });
-//Returns a funciton every x frames per second
+//Returns a function every x frames per second
 //fps depends on computer and browser
 //usually 60fps. if not, 30fps.
 window.requestAnimFrame = (function(){

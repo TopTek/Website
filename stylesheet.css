@@ -163,6 +163,7 @@ example: we recently found out that computer club was canceled this week*/
 	border-top-right-radius: 15px;
 	border-top-left-radius: 15px;
 	text-align: center;
+	overflow: hidden;
 }
 
 .textStyle1{
@@ -246,4 +247,13 @@ example: we recently found out that computer club was canceled this week*/
 	text-align: left;
 	font-size: 16px;
 	padding: 4px;
+}
+.textStyle7{
+	color: #ccccff;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: left;
+	font-size: 16px;
+	padding: 4px;
+	font-size: 24px;
 }
