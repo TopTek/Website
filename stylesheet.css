@@ -171,6 +171,7 @@ example: we recently found out that computer club was canceled this week*/
 	width: 24px;
 	height: 24px;
 	float:right;
+	transform: rotate(0deg);
 }
 
 .projectFooter{
