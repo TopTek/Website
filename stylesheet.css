@@ -1,6 +1,6 @@
 
 *{
-	/* border:1px dashed blue;
+	/*border:1px dashed blue;
 	/* ^ Only for testing element boxes ^ */
 	margin: 0;
 	padding: 0;
@@ -200,6 +200,12 @@ example: we recently found out that computer club was canceled this week*/
 	font-size: 18px;
 }
 
+.projectTeamList{
+	display:inline-block;
+	padding:6px;
+	width:100%;
+}
+
 #aboutUs{
 	background-color: #707070;
 	height: 100%;
@@ -320,5 +326,33 @@ example: we recently found out that computer club was canceled this week*/
 	font-family: Verdana;
 	font-weight: bold;
 	text-align: left;
+	font-size: 24px;
+}
+
+.textStyle9{
+	float: left;
+	color: #111111;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: right;
+	font-size: 24px;
+}
+
+.textStyle10{
+	float:right;
+	color: #111111;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: left;
+	font-size: 24px;
+	padding-right: 10px;
+}
+
+.textStyle11{
+	float:center;
+	text-align: center;
+	color: #111111;
+	font-family: Verdana;
+	font-weight: bold;
 	font-size: 24px;
 }
