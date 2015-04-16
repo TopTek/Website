@@ -162,6 +162,7 @@ example: we recently found out that computer club was canceled this week*/
 	text-align:left;
 	border-top-right-radius:16px;
 	border-bottom: 2px solid #444444;
+	border-top: 3px solid #444444;
 	cursor: pointer;
 }
 
@@ -180,6 +181,7 @@ example: we recently found out that computer club was canceled this week*/
 	text-align:left;
 	border-bottom-right-radius:16px;
 	height:24px;
+	border-bottom: 4px solid #444444;
 	border-top: 2px solid #444444;
 }
 
@@ -197,13 +199,12 @@ example: we recently found out that computer club was canceled this week*/
 	font-family: Verdana;
 	font-weight: bold;
 	text-align: justify;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .projectTeamList{
 	display:inline-block;
-	padding:6px;
-	width:100%;
+	width: 100%;
 }
 
 #aboutUs{
@@ -335,7 +336,8 @@ example: we recently found out that computer club was canceled this week*/
 	font-family: Verdana;
 	font-weight: bold;
 	text-align: right;
-	font-size: 24px;
+	font-size: 20px;
+	padding: 6px;
 }
 
 .textStyle10{
@@ -344,8 +346,8 @@ example: we recently found out that computer club was canceled this week*/
 	font-family: Verdana;
 	font-weight: bold;
 	text-align: left;
-	font-size: 24px;
-	padding-right: 10px;
+	font-size: 20px;
+	padding: 6px;
 }
 
 .textStyle11{
@@ -355,4 +357,5 @@ example: we recently found out that computer club was canceled this week*/
 	font-family: Verdana;
 	font-weight: bold;
 	font-size: 24px;
+	padding: 6px;
 }
