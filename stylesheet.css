@@ -89,7 +89,7 @@ example: we recently found out that computer club was canceled this week*/
 }
 
 .pageForeground{
-	background-color: #a0a0a0;
+	background-color: #aaaaaa;
 	height: 100%;
 	margin: 0px 10px 0px 10px;
 }
@@ -207,6 +207,22 @@ example: we recently found out that computer club was canceled this week*/
 	width: 100%;
 }
 
+.progressBarBackground{
+	width:25%; 
+	background-color: #ff0000; 
+	float:right; 
+	margin:6px;
+	border-radius: 4px;
+}
+
+.progressBarForeground{
+	width: 100%;
+	background-color: #00ff00;
+	float:left;
+	border-radius: 4px;
+	height: 24px;
+}
+
 #aboutUs{
 	background-color: #707070;
 	height: 100%;
@@ -227,6 +243,8 @@ example: we recently found out that computer club was canceled this week*/
 	text-align: center;
 	overflow: hidden;
 }
+
+/* ------THESE ARE THE TEXT STYLES FOR THE WEBSITE------ */
 
 .textStyle1{
 	color: #ccccff;
@@ -368,4 +386,17 @@ example: we recently found out that computer club was canceled this week*/
 	text-align: center;
 	font-size: 20px;
 	padding: 2px;
+}
+
+.textStyle13{
+	float:left;
+	color: #111111;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+	padding: 2px;
+	display: block;
+	clear: both;
+	margin-left: 20px;
 }
