@@ -359,3 +359,13 @@ example: we recently found out that computer club was canceled this week*/
 	font-size: 24px;
 	padding: 6px;
 }
+
+.textStyle12{
+	float:center;
+	color: #111111;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 20px;
+	padding: 2px;
+}
