@@ -1,163 +1,173 @@
 <!DOCTYPE html?
 <html>
-	<head>
+<head>
 	
-		<!--Background Music
-		<audio src="soundfile.jpg" hidden="true" autostart="true" loop="true"/>  -->
-		<title>TopTek - Lincoln East High school Computer Club</title>
-		<link rel="shortcut icon" href="TopTek_icon_100x100.png"/>
-		<link rel='stylesheet' type='text/css' href='stylesheet.css'/>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script type='text/javascript' src='script.js'></script>
-	</head>
-	<body>
-		
-		<!-- PAGE BACKGROUND -->
-		<div id="background"></div>
-		
-		<!-- HOME PAGE -->
-		<div id="home">
-			<div class="pageForeground">
-				<div class="pageBlock"></div>
-				
-				
-			</div>
+	<!--Background Music
+	<audio src="soundfile.jpg" hidden="true" autostart="true" loop="true"/>  -->
+	<title>TopTek - Lincoln East High school Computer Club</title>
+	<link rel="shortcut icon" href="TopTek_icon_100x100.png"/>
+	<link rel='stylesheet' type='text/css' href='stylesheet.css'/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type='text/javascript' src='script.js'></script>
+</head>
+<body>
+	
+	<!-- PAGE BACKGROUND -->
+	<div id="background"></div>
+	
+	<!-- HOME PAGE -->
+	<div id="home">
+		<div class="pageForeground">
+			<div class="pageBlock"></div>
+			
+			
 		</div>
-		
-		<!-- INFORMATION PAGE -->
-		<!-- Information = Calender Page -->
-		<div id="information">
-			<div class="pageForeground">
+	</div>
+	
+	<!-- INFORMATION PAGE -->
+	<!-- Information = Calender Page -->
+	<div id="information">
+		<div class="pageForeground">
 			<div class="pageBlock"></div>
 			<h1 class="textStyle4" id="informationTitle">Calendar</h1>
-				<div id="calendar-container">
-					<iframe id="calendar" src="https://www.google.com/calendar/embed?src=5cfg27e5h2ci0aoc7e1291bo38%40group.calendar.google.com&ctz=America/Chicago"></iframe>
-					
-				</div>
+			<div id="calendar-container">
+				<iframe id="calendar" src="https://www.google.com/calendar/embed?src=5cfg27e5h2ci0aoc7e1291bo38%40group.calendar.google.com&ctz=America/Chicago"></iframe>
+				
 			</div>
 		</div>
-		
-		<!-- PROJECTS PAGE -->
-		<div id="projects">
-			<div class="pageForeground">
+	</div>
+	
+	<!-- PROJECTS PAGE -->
+	<div id="projects">
+		<div class="pageForeground">
 			<div class="pageBlock"></div>
 			<h1 class="textStyle4" id="projectsTitle">Projects</h1>
 			<div>
-				<div class="projectHeader">
+				<div class="projectHeader" id="projectWebsiteHeader">
 					<div style="display:inline-block;"><h1 class="textStyle8">Website</h1></div>
-						
-						<img class="trianglePullDown" src="Triangle_PullDown_100x100.png"></img>
-					</div>					
-					<!-- Where the content under project goes -->
-					<!-- Project description with an image -->
-					<div style="display: inline-block; border: 2px #555555 solid;">
-						<p class="projectDescription">
-							<img src="Computer_400x200.png" class="computerIcon">
-							The TopTek Website is a project that is currently under development. It had soon become apparent in TopTek that we would need a website 
-							to be able to post updates and release ourselves to the public. The website is suppose to operate as a means for people interested in 
-							the club to both interact with current members and get to know what we are all about.
-						</p>
-					</div>
-					
-					<!-- The team and members who are and have worked on the project-->
-					<div style="border: 2px #555555 solid">
-						<!-- 1, 5, 10, 25, 50, 75, 100, 150, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250 etc -->
-						<h1 class="textStyle11">Team Members and Their Contribution</h1>
-						
-						<div class="projectTeamList" style="border-bottom: 2px #444444 dashed;">
-							<h1 class="textStyle9">Team Member</h1>
-							<h1 class="textStyle10">Number of Changes</h1>
+					<img class="trianglePullDown" id="projectWebsiteTriangle" src="Triangle_PullDown_100x100.png"></img>
+				</div>					
+				<!-- Where the content under project goes -->
+				<!-- Project description with an image -->
+				<div style="overflow: hidden; position: relative;">
+					<div id="projectWebsiteContent" class="projectContent">
+						<div style="display: inline-block; border: 2px #555555 solid;">
+							<p class="projectDescription">
+								<img src="Computer_400x200.png" class="computerIcon">
+								The TopTek Website is a project that is currently under development. It had soon become apparent in TopTek that we would need a website 
+								to be able to post updates and release ourselves to the public. The website is suppose to operate as a means for people interested in 
+								the club to both interact with current members and get to know what we are all about.
+							</p>
 						</div>
 						
-						<div class="projectTeamList">
-							<h1 class="textStyle9">Ethan Penn</h1>
-							<h1 class="textStyle10">1500+ Changes</h1>
-						</div>
-						
-						<div class="projectTeamList">
-							<h1 class="textStyle9">Andrew Buckwalter</h1>
-							<h1 class="textStyle10">150+ Changes</h1>
-						</div>
-						
-						<div class="projectTeamList">
-							<h1 class="textStyle9">Michael Mason</h1>
-							<h1 class="textStyle10">25+ Changes</h1>
-						</div>
-					</div>
-					
-					<!-- Plans for what needs to be added-->
-					<div style="border: 2px #555555 solid">
-						<h1 class="textStyle11">Current Project Plans</h1>
-						
-						<div style="display:inline-block; width:100%; border-bottom: 2px #444444 dashed;">
-							<h1 class="textStyle9">Future Change</h1>
-							<div class="progressBarBackground">
-								<h1 class="textStyle12">Progress</h1>
-								<div class="progressBarForeground" style="width:25%;"></div>
+						<!-- The team and members who are and have worked on the project-->
+						<div style="border: 2px #555555 solid">
+							<!-- 1, 5, 10, 25, 50, 75, 100, 150, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250 etc -->
+							<h1 class="textStyle11">Team Members and Their Contribution</h1>
+							
+							<div class="projectTeamList" style="border-bottom: 2px #444444 dashed;">
+								<h1 class="textStyle9">Team Member</h1>
+								<h1 class="textStyle10">Number of Changes</h1>
 							</div>
-							<h1 class="textStyle10">Assigned Person(s)</h1>
-							<h1 class="textStyle13">-Checkpoints</h1>
+							
+							<div class="projectTeamList">
+								<h1 class="textStyle9">Ethan Penn</h1>
+								<h1 class="textStyle10">1500+ Changes</h1>
+							</div>
+							
+							<div class="projectTeamList">
+								<h1 class="textStyle9">Andrew Buckwalter</h1>
+								<h1 class="textStyle10">150+ Changes</h1>
+							</div>
+							
+							<div class="projectTeamList">
+								<h1 class="textStyle9">Michael Mason</h1>
+								<h1 class="textStyle10">25+ Changes</h1>
+							</div>
 						</div>
 						
-						<div style="display:inline-block; width:100%;">
-							<h1 class="textStyle9">Future Change</h1>
-							<div style="width:25%; background-color:red; float:right; margin:6px;"><h1 class="textStyle12">Progress</h1></div>
-							<h1 class="textStyle10">Assigned Person(s)</h1>
+						<!-- Plans for what needs to be added-->
+						<div style="border: 2px #555555 solid;">
+							<h1 class="textStyle11">Current Project Plans</h1>
+							
+							<div class="projectPlan" style="border-bottom: 2px #444444 dashed;">
+								<h1 class="textStyle9">Future Change</h1>
+								<div class="progressBarBackground">
+									<div class="textStyle12">Progress</div>
+									<div class="progressBarForeground" style="width:100%;"></div>
+								</div>
+								<h1 class="textStyle10">Assigned Person(s)</h1>
+								<h1 class="textStyle13">-Checkpoints</h1>
+							</div>
+							
+							<div class="projectPlan">
+								<h1 class="textStyle9">Home Page</h1>
+								<div class="progressBarBackground">
+									<div class="textStyle12">0/3</div>
+									<div class="progressBarForeground" style="width:0%;"></div>
+								</div>
+								<h1 class="textStyle10">Not Assigned</h1>
+								<h1 class="textStyle13">-Take pictures of the School including entrance, computer lab, and other common places.</h1>
+								<h1 class="textStyle13">-Add pictures and information to the Home page.</h1>
+								<h1 class="textStyle13">-Beautify it.</h1>
+							</div>
+							
 						</div>
-						
 					</div>
-					<div class="projectFooter"></div>
 				</div>
+				<div class="projectFooter" ></div>
 			</div>
 		</div>
+	</div>
+	
+	<!-- ABOUT US PAGE -->
+	<div id="aboutUs">
+		<div class="pageForeground">
+			<div class="pageBlock"></div>
+			
 		
-		<!-- ABOUT US PAGE -->
-		<div id="aboutUs">
-			<div class="pageForeground">
-				<div class="pageBlock"></div>
-				
-				
-			</div>
+		</div>
 		</div>
 		
 		<!-- SUBHEADER -->
 		<div id="subHeader">
-			<div id="subHeaderBox">
-				<h1 id="subHeaderHomeButton" class="textStyle3">Home</h1>
-				<img class="alertIcon" src="Alert_icon_100x100.png"></img>
-			</div>
-			<div id="subHeaderBox">
-				<h1 id="subHeaderInformationButton" class="textStyle3">Calendar</h1>
-				<img class="alertIcon" src="Alert_icon_100x100.png"></img>
-			</div>
-			<div id="subHeaderBox">
-				<h1 id="subHeaderProjectsButton" class="textStyle3">Projects</h1>
-				<img class="alertIcon" src="Alert_icon_100x100.png"></img>
-			</div>
-			<div id="subHeaderBox">
-				<h1 id="subHeaderAboutUsButton" class="textStyle3">About Us</h1>
-				<img class="alertIcon" src="Alert_icon_100x100.png"></img>
-			</div>
+		<div id="subHeaderBox">
+		<h1 id="subHeaderHomeButton" class="textStyle3">Home</h1>
+		<img class="alertIcon" src="Alert_icon_100x100.png"></img>
+		</div>
+		<div id="subHeaderBox">
+		<h1 id="subHeaderInformationButton" class="textStyle3">Calendar</h1>
+		<img class="alertIcon" src="Alert_icon_100x100.png"></img>
+		</div>
+		<div id="subHeaderBox">
+		<h1 id="subHeaderProjectsButton" class="textStyle3">Projects</h1>
+		<img class="alertIcon" src="Alert_icon_100x100.png"></img>
+		</div>
+		<div id="subHeaderBox">
+		<h1 id="subHeaderAboutUsButton" class="textStyle3">About Us</h1>
+		<img class="alertIcon" src="Alert_icon_100x100.png"></img>
+		</div>
 		</div>
 		
 		<!-- FOOTER -->
 		<div id="footer">
-			<marquee scroll-delay="150" class="textStyle7">Welcome to TopTek!</a></marquee>
+		<marquee scroll-delay="150" class="textStyle7">Welcome to TopTek!</a></marquee>
 		</div>
 		
 		<!-- HEADER -->
 		<div id="header">
-			<a href="index.html">
-				<img class="icon" src="TopTek_icon_100x100.png"></img>
-			</a>
-			<div id="headerText">
-				<h1 class="textStyle1">TopTek</h1>
-				<h1 class="textStyle1">Lincoln East Computer Club</h1>
-			</div>
-			<div id="headerRegLog">
-				<h1 class="textStyle2">Register</h1>
-				<h1 class="textStyle2">Login</h1>
-			</div>
+		<a href="index.html">
+		<img class="icon" src="TopTek_icon_100x100.png"></img>
+		</a>
+		<div id="headerText">
+		<h1 class="textStyle1">TopTek</h1>
+		<h1 class="textStyle1">Lincoln East Computer Club</h1>
 		</div>
-	</body>
-</html>
+		<div id="headerRegLog">
+		<h1 class="textStyle2">Register</h1>
+		<h1 class="textStyle2">Login</h1>
+		</div>
+		</div>
+		</body>
+		</html>
+				

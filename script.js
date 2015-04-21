@@ -2,6 +2,7 @@ $(document).ready(function(){
 	
 	//Website Updates Per Second. Usually 60;
 	var websiteUPS=60;
+	var firstUP=true;
 	
 	var currentPage=0;
 	//What page the website is currently on
@@ -22,7 +23,7 @@ $(document).ready(function(){
 	//after another page animates
 	var pageAnimSpeed=1000;
 	//the speed that a page animate
-	var pageAnimate=false;
+	var pageAnimate=true;
 	//when a page may animate, though nothing to do with pageAnimTime
 	
 	//These are used for when the subHeader animates or slides down or up
@@ -36,6 +37,18 @@ $(document).ready(function(){
 	//used to stop a bug where it will go up-down twice in a row when it shouldn't
 	var subHeaderHideSpeed=350;
 	//the speed that it slides up or down
+	
+	//Projects
+	var projectWebsiteDown=false;
+	var projectWebsiteAnim=true;
+	var projectWebsiteLength=$('#projectWebsiteContent').outerHeight();
+	console.log(projectWebsiteLength);
+	var projectWebsiteAnimTime=0;
+	var projectWebsiteHideSpeed=1000;
+	
+	//-----< BEGINNING OF THE FUNCTIONS AND END OF VARIABLES >-----
+	
+	//-----< BEGINNING OF JQUERY FUNCTION >-----
 	
 	//Triggers when the mouse enters the boarder within the subHeader
 	$('#subHeader').mouseenter(function(){
@@ -53,40 +66,47 @@ $(document).ready(function(){
 	$('#subHeaderHomeButton').click(function(){
 		if(currentPage!=0){
 			currentPage=0;
-			goToPage=0;
 			pageAnimate=true;
 		}
 	})
 	$('#subHeaderInformationButton').click(function(){
 		if(currentPage!=1){
 			currentPage=1;
-			goToPage=1;
 			pageAnimate=true;
 		}
 	})
 	$('#subHeaderProjectsButton').click(function(){
 		if(currentPage!=2){
 			currentPage=2;
-			goToPage=2;
 			pageAnimate=true;
 		}
 	})
 	$('#subHeaderAboutUsButton').click(function(){
 		if(currentPage!=3){
 			currentPage=3;
-			goToPage=3;
 			pageAnimate=true;
 		}
 	})
 	
+	$('#projectWebsiteHeader').click(function(){
+			if(projectWebsiteDown && !projectWebsiteAnim){
+			projectWebsiteDown=false;
+		}else if(!projectWebsiteDown && !projectWebsiteAnim){
+			projectWebsiteDown=true;
+		}
+		projectWebsiteAnim=true;
+	})
+	
+	//-----< END OF JQUERY FUNCTIONS >-----
+	
 	//Updates whether the subHeader is pulled down or not
 	function subHeader(){
-		if(subHeaderHidden===0 && subHeaderAnimTime==0){
+		if(subHeaderHidden===0 && subHeaderAnimTime===0){
 			$('#subHeader').animate({top: '58px'}, subHeaderHideSpeed);
 			subHeaderHidden=1;
 			subHeaderAnimTime=subHeaderHideSpeed;
 		}
-		if(subHeaderHidden===2 && subHeaderAnimTime==0){
+		if(subHeaderHidden===2 && subHeaderAnimTime===0){
 			$('#subHeader').animate({top: '98px'}, subHeaderHideSpeed);
 			subHeaderHidden=1;
 			subHeaderAnimTime=subHeaderHideSpeed;
@@ -138,10 +158,32 @@ $(document).ready(function(){
 		if(pageAnimTime < 0) pageAnimTime=0;
 	}
 	
+	function projectsPullDown(){
+		if(projectWebsiteDown && projectWebsiteAnim && projectWebsiteAnimTime===0){
+			$('#projectWebsiteContent').animate({'height': projectWebsiteLength}, projectWebsiteHideSpeed);
+			$('#projectWebsiteTriangle').css({transform: 'rotate(90deg)'});
+			projectWebsiteAnim=false;
+			projectWebsiteAnimTime=projectWebsiteHideSpeed;
+		}
+		else if(!projectWebsiteDown && projectWebsiteAnim && projectWebsiteAnimTime===0)
+		{
+			$('#projectWebsiteContent').animate({'height': '0px'}, projectWebsiteHideSpeed);
+			$('#projectWebsiteTriangle').css({transform: 'rotate(0deg)'});
+			projectWebsiteAnim=false;
+			projectWebsiteAnimTime=projectWebsiteHideSpeed;
+		}
+		if(projectWebsiteAnimTime > 0) projectWebsiteAnimTime-=(1000/websiteUPS)
+		if(projectWebsiteAnimTime < 0) projectWebsiteAnimTime=0;
+	}
+	
 	//Updates the website for javascript functions to work correctly
 	function update(){
 		subHeader();
 		pagePositions();
+		if(currentPage===2 || firstUP){
+			projectsPullDown();
+		}
+		firstUP=false;
 	}
 	
 	//This function runs the updates, and if needed, renderings in this file.
