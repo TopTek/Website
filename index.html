@@ -7,27 +7,23 @@
 	<title>TopTek - Lincoln East High school Computer Club</title>
 	<link rel="shortcut icon" href="TopTek_icon_100x100.png"/>
 	<link rel='stylesheet' type='text/css' href='stylesheet.css'/>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 	<script type='text/javascript' src='script.js'></script>
 </head>
 <body>
 	
-	<!-- PAGE BACKGROUND -->
-	<div id="background"></div>
-	
 	<!-- HOME PAGE -->
 	<div id="home">
-		<div class="pageForeground">
+		<div class="pageContent">
 			<div class="pageBlock"></div>
-			
-			
 		</div>
 	</div>
 	
 	<!-- INFORMATION PAGE -->
 	<!-- Information = Calender Page -->
 	<div id="information">
-		<div class="pageForeground">
+		<div class="pageContent">
 			<div class="pageBlock"></div>
 			<h1 class="textStyle4" id="informationTitle">Calendar</h1>
 			<div id="calendar-container">
@@ -39,7 +35,7 @@
 	
 	<!-- PROJECTS PAGE -->
 	<div id="projects">
-		<div class="pageForeground">
+		<div class="pageContent" id="projectsContent">
 			<div class="pageBlock"></div>
 			<h1 class="textStyle4" id="projectsTitle">Projects</h1>
 			<div>
@@ -117,57 +113,61 @@
 				</div>
 				<div class="projectFooter" ></div>
 			</div>
+			<div class="pageBlock"></div>
 		</div>
+		
+		<!-- PAGE SCROLLER -->
+		<div id="projectScroller" class="scroller"></div>
+		
 	</div>
 	
 	<!-- ABOUT US PAGE -->
 	<div id="aboutUs">
-		<div class="pageForeground">
+		<div class="pageContent">
 			<div class="pageBlock"></div>
 			
-		
+			
 		</div>
-		</div>
-		
-		<!-- SUBHEADER -->
-		<div id="subHeader">
+	</div>
+	
+	<!-- SUBHEADER -->
+	<div id="subHeader">
 		<div id="subHeaderBox">
-		<h1 id="subHeaderHomeButton" class="textStyle3">Home</h1>
-		<img class="alertIcon" src="Alert_icon_100x100.png"></img>
-		</div>
-		<div id="subHeaderBox">
-		<h1 id="subHeaderInformationButton" class="textStyle3">Calendar</h1>
-		<img class="alertIcon" src="Alert_icon_100x100.png"></img>
+			<h1 id="subHeaderHomeButton" class="textStyle3">Home</h1>
+			<img class="alertIcon" src="Alert_icon_100x100.png"></img>
 		</div>
 		<div id="subHeaderBox">
-		<h1 id="subHeaderProjectsButton" class="textStyle3">Projects</h1>
-		<img class="alertIcon" src="Alert_icon_100x100.png"></img>
+			<h1 id="subHeaderInformationButton" class="textStyle3">Calendar</h1>
+			<img class="alertIcon" src="Alert_icon_100x100.png"></img>
 		</div>
 		<div id="subHeaderBox">
-		<h1 id="subHeaderAboutUsButton" class="textStyle3">About Us</h1>
-		<img class="alertIcon" src="Alert_icon_100x100.png"></img>
+			<h1 id="subHeaderProjectsButton" class="textStyle3">Projects</h1>
+			<img class="alertIcon" src="Alert_icon_100x100.png"></img>
 		</div>
+		<div id="subHeaderBox">
+			<h1 id="subHeaderAboutUsButton" class="textStyle3">About Us</h1>
+			<img class="alertIcon" src="Alert_icon_100x100.png"></img>
 		</div>
-		
-		<!-- FOOTER -->
-		<div id="footer">
-		<marquee scroll-delay="150" class="textStyle7">Welcome to TopTek!</a></marquee>
-		</div>
-		
-		<!-- HEADER -->
-		<div id="header">
+	</div>
+	
+	<!-- FOOTER -->
+	<div id="footer">
+		<marquee scroll-delay="150" class="textStyle7">Welcome to TopTek!</marquee>
+	</div>
+	
+	<!-- HEADER -->
+	<div id="header">
 		<a href="index.html">
-		<img class="icon" src="TopTek_icon_100x100.png"></img>
+			<img class="icon" src="TopTek_icon_100x100.png"></img>
 		</a>
 		<div id="headerText">
-		<h1 class="textStyle1">TopTek</h1>
-		<h1 class="textStyle1">Lincoln East Computer Club</h1>
+			<h1 class="textStyle1">TopTek</h1>
+			<h1 class="textStyle1">Lincoln East Computer Club</h1>
 		</div>
 		<div id="headerRegLog">
-		<h1 class="textStyle2">Register</h1>
-		<h1 class="textStyle2">Login</h1>
+			<h1 class="textStyle2">Register</h1>
+			<h1 class="textStyle2">Login</h1>
 		</div>
-		</div>
-		</body>
-		</html>
-				
+	</div>
+</body>
+</html>

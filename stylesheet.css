@@ -5,6 +5,7 @@
 	margin: 0;
 	padding: 0;
 	cursor: default;
+	box-sizing: border-box;
 }
 
 /*use this when you need somthing to disappear. For examample: if you need
@@ -81,38 +82,47 @@ example: we recently found out that computer club was canceled this week*/
 
 #subHeaderAboutUsButton{}
 
-#background{
-	background-color: #3333ff;
-	height: 100%;
-	width: 100%;
-	position: fixed;
+.scroller{
+	background-color: #222222;
+	height: 175px;
+	position:relative;
+	cursor: pointer;
+	width: 10px;
+	border-radius: 5px;
+	float: right;
+	border-width: 0px;
+	left: 10px;
 }
 
-.pageForeground{
-	background-color: #aaaaaa;
-	height: 100%;
-	margin: 0px 10px 0px 10px;
+#projectScroller{}
+
+.pageContent{
+	position: absolute;
 }
+
+#projectsContent{}
 
 .pageBlock{
 	height: 118px;
 }
 
 #home{
-	background-color: #707070;
+	background-color: #aaaaaa;
 	height: 100%;
-	width: 100%;
+	border: 10px #707070 solid;
 	position: fixed;
 	left: 0%;
+	width: 100%;
 }
 
 /*--- Information Page's Ids and Classes' ---*/
 #information{
-	background-color: #707070;
+	background-color: #aaaaaa;
 	height: 100%;
-	width: 100%;
+	border: 10px #707070 solid;
 	position: fixed;
 	left: 100%;
+	width: 100%;
 }
 
 #informationTitle{
@@ -137,11 +147,12 @@ example: we recently found out that computer club was canceled this week*/
 
 /*--- Projects Page's Ids and Classes' ---*/
 #projects{
-	background-color: #707070;
+	background-color: #aaaaaa;
 	height: 100%;
-	width: 100%;
+	border: 10px #707070 solid;
 	position: fixed;
 	left: 200%;
+	width: 100%;
 }
 
 #projectsTitle{}
@@ -161,7 +172,7 @@ example: we recently found out that computer club was canceled this week*/
 
 .projectHeader{
 	display:inline-block;
-	background-color:#777777;
+	background-color:#707070;
 	width: 100%;
 	text-align:left;
 	border-top-right-radius:16px;
@@ -184,7 +195,7 @@ example: we recently found out that computer club was canceled this week*/
 }
 
 .projectFooter{
-	background-color:#777777;
+	background-color:#707070;
 	width: 100%;
 	text-align:left;
 	border-bottom-right-radius:16px;
@@ -243,11 +254,12 @@ example: we recently found out that computer club was canceled this week*/
 }
 
 #aboutUs{
-	background-color: #707070;
+	background-color: #aaaaaa;
 	height: 100%;
-	width: 100%;
+	border: 10px #707070 solid;
 	position: fixed;
 	left: 300%;
+	width: 100%;
 }
 
 #footer{

@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var websiteUPS=60;
 	var firstUP=true;
 	
-	var currentPage=0;
+	var currentPage=2;
 	//What page the website is currently on
 	//0 = Home
 	//1 = Information
@@ -42,13 +42,15 @@ $(document).ready(function(){
 	var projectWebsiteDown=false;
 	var projectWebsiteAnim=true;
 	var projectWebsiteLength=$('#projectWebsiteContent').outerHeight();
-	console.log(projectWebsiteLength);
 	var projectWebsiteAnimTime=0;
 	var projectWebsiteHideSpeed=1000;
 	
 	//-----< BEGINNING OF THE FUNCTIONS AND END OF VARIABLES >-----
 	
 	//-----< BEGINNING OF JQUERY FUNCTION >-----
+	
+	$('.scroller').draggable({axis: 'y'});
+	$('.scroller').draggable({containment: 'parent'});
 	
 	//Triggers when the mouse enters the boarder within the subHeader
 	$('#subHeader').mouseenter(function(){
@@ -95,6 +97,12 @@ $(document).ready(function(){
 			projectWebsiteDown=true;
 		}
 		projectWebsiteAnim=true;
+	})
+		
+	$('#scroller').hover(function(){
+		$(this).click(function(){
+			
+		})
 	})
 	
 	//-----< END OF JQUERY FUNCTIONS >-----
@@ -159,7 +167,11 @@ $(document).ready(function(){
 	}
 	
 	function projectsPullDown(){
-		if(projectWebsiteDown && projectWebsiteAnim && projectWebsiteAnimTime===0){
+		if(projectWebsiteDown && !projectWebsiteAnim && projectWebsiteAnimTime===0){
+			$('#projectWebsiteContent').css({'height': 'auto'});
+			projectWebsiteLength=$('#projectWebsiteContent').outerHeight();
+		}
+		else if(projectWebsiteDown && projectWebsiteAnim && projectWebsiteAnimTime===0){
 			$('#projectWebsiteContent').animate({'height': projectWebsiteLength}, projectWebsiteHideSpeed);
 			$('#projectWebsiteTriangle').css({transform: 'rotate(90deg)'});
 			projectWebsiteAnim=false;
@@ -176,12 +188,22 @@ $(document).ready(function(){
 		if(projectWebsiteAnimTime < 0) projectWebsiteAnimTime=0;
 	}
 	
+	function projectScroller(){
+		var height = $('#projectScroller').position().top/($(window).height() - 195) * 100;
+		var height2 = $('#projectsContent').outerHeight()- $(window).height();
+		if(height2<0) height2=0;
+		height *= height2/$(window).height();
+		console.log(height)
+		$('#projectsContent').css({top: -height + '%'})
+	}
+	
 	//Updates the website for javascript functions to work correctly
 	function update(){
 		subHeader();
 		pagePositions();
 		if(currentPage===2 || firstUP){
 			projectsPullDown();
+			projectScroller();
 		}
 		firstUP=false;
 	}
