@@ -45,6 +45,12 @@ $(document).ready(function(){
 	var projectWebsiteAnimTime=0;
 	var projectWebsiteHideSpeed=1000;
 	
+	var projectCalculatorDown=false;
+	var projectCalculatorAnim=true;
+	var projectCalculatorLength=$('#projectCalculatorContent').outerHeight();
+	var projectCalculatorAnimTime=0;
+	var projectCalculatorHideSpeed=1000;
+	
 	//-----< BEGINNING OF THE FUNCTIONS AND END OF VARIABLES >-----
 	
 	//-----< BEGINNING OF JQUERY FUNCTION >-----
@@ -98,11 +104,14 @@ $(document).ready(function(){
 		}
 		projectWebsiteAnim=true;
 	})
-		
-	$('#scroller').hover(function(){
-		$(this).click(function(){
-			
-		})
+	
+	$('#projectCalculatorHeader').click(function(){
+			if(projectCalculatorDown && !projectCalculatorAnim){
+			projectCalculatorDown=false;
+		}else if(!projectCalculatorDown && !projectCalculatorAnim){
+			projectCalculatorDown=true;
+		}
+		projectCalculatorAnim=true;
 	})
 	
 	//-----< END OF JQUERY FUNCTIONS >-----
@@ -186,6 +195,28 @@ $(document).ready(function(){
 		}
 		if(projectWebsiteAnimTime > 0) projectWebsiteAnimTime-=(1000/websiteUPS)
 		if(projectWebsiteAnimTime < 0) projectWebsiteAnimTime=0;
+		
+		
+		
+		if(projectCalculatorDown && !projectCalculatorAnim && projectCalculatorAnimTime===0){
+			$('#projectCalculatorContent').css({'height': 'auto'});
+			projectCalculatorLength=$('#projectCalculatorContent').outerHeight();
+		}
+		else if(projectCalculatorDown && projectCalculatorAnim && projectCalculatorAnimTime===0){
+			$('#projectCalculatorContent').animate({'height': projectCalculatorLength}, projectCalculatorHideSpeed);
+			$('#projectCalculatorTriangle').css({transform: 'rotate(90deg)'});
+			projectCalculatorAnim=false;
+			projectCalculatorAnimTime=projectCalculatorHideSpeed;
+		}
+		else if(!projectCalculatorDown && projectCalculatorAnim && projectCalculatorAnimTime===0)
+		{
+			$('#projectCalculatorContent').animate({'height': '0px'}, projectCalculatorHideSpeed);
+			$('#projectCalculatorTriangle').css({transform: 'rotate(0deg)'});
+			projectCalculatorAnim=false;
+			projectCalculatorAnimTime=projectCalculatorHideSpeed;
+		}
+		if(projectCalculatorAnimTime > 0) projectCalculatorAnimTime-=(1000/websiteUPS)
+		if(projectCalculatorAnimTime < 0) projectCalculatorAnimTime=0;
 	}
 	
 	function projectScroller(){

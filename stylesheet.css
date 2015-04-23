@@ -166,9 +166,12 @@ example: we recently found out that computer club was canceled this week*/
 
 /* Lets Javascript identify each project by id */
 #projectWebsiteHeader{}
-#projectWebsiteContent{
-	height: auto;
-}
+#projectWebsiteContent{height: auto;}
+#projectWebsiteTriangle{transform: rotate(0deg);}
+
+#projectCalculatorHeader{}
+#projectCalculatorContent{height: auto;}
+#projectCalculatorTriangle{transform: rotate(0deg);}
 
 .projectHeader{
 	display:inline-block;
@@ -188,14 +191,6 @@ example: we recently found out that computer club was canceled this week*/
 	height: 24px;
 	float:right;
 	cursor: pointer;
-}
-
-#projectWebsiteTriangle{
-	transform: rotate(0deg);
-}
-
-#projectcalculatorTriangle{
-	transform: rotate(0deg);
 }
 
 .projectFooter{
