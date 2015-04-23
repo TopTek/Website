@@ -194,6 +194,10 @@ example: we recently found out that computer club was canceled this week*/
 	transform: rotate(0deg);
 }
 
+#projectcalculatorTriangle{
+	transform: rotate(0deg);
+}
+
 .projectFooter{
 	background-color:#707070;
 	width: 100%;
