@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var websiteUPS=60;
 	var firstUP=true;
 	
-	var currentPage=2;
+	var currentPage=1;
 	//What page the website is currently on
 	//0 = Home
 	//1 = Information
@@ -228,10 +228,24 @@ $(document).ready(function(){
 		$('#projectsContent').css({top: -height + '%'})
 	}
 	
+	function informationScroller(){
+		var height = $('#informationScroller').position().top/($(window).height() - 195) * 100;
+		var height2 = $('#informationContent').outerHeight()- $(window).height();
+		if(height2<0) height2=0;
+		height *= height2/$(window).height();
+		console.log(height)
+		$('#informationContent').css({top: -height + '%'})
+	}
+	
 	//Updates the website for javascript functions to work correctly
 	function update(){
 		subHeader();
 		pagePositions();
+		
+		if(currentPage===1 || firstUP){
+			informationScroller();
+		}
+		
 		if(currentPage===2 || firstUP){
 			projectsPullDown();
 			projectScroller();
