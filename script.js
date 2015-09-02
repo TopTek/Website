@@ -4,7 +4,7 @@ $(document).ready(function(){
 	var websiteUPS=60;
 	var firstUP=true;
 	
-	var currentPage=1;
+	var currentPage=0;
 	//What page the website is currently on
 	//0 = Home
 	//1 = Information
@@ -38,6 +38,9 @@ $(document).ready(function(){
 	var subHeaderHideSpeed=350;
 	//the speed that it slides up or down
 	
+	var registerImputs=["","","",""];
+	var registerImputReady=[1,0,0,0];
+	
 	//Projects
 	var projectWebsiteDown=false;
 	var projectWebsiteAnim=true;
@@ -57,6 +60,8 @@ $(document).ready(function(){
 	
 	$('.scroller').draggable({axis: 'y'});
 	$('.scroller').draggable({containment: 'parent'});
+	
+	$('#regLog').hide();
 	
 	//Triggers when the mouse enters the boarder within the subHeader
 	$('#subHeader').mouseenter(function(){
@@ -97,21 +102,29 @@ $(document).ready(function(){
 	})
 	
 	$('#projectWebsiteHeader').click(function(){
-			if(projectWebsiteDown && !projectWebsiteAnim){
+		if(projectWebsiteDown && !projectWebsiteAnim){
 			projectWebsiteDown=false;
-		}else if(!projectWebsiteDown && !projectWebsiteAnim){
+			}else if(!projectWebsiteDown && !projectWebsiteAnim){
 			projectWebsiteDown=true;
 		}
 		projectWebsiteAnim=true;
 	})
 	
 	$('#projectCalculatorHeader').click(function(){
-			if(projectCalculatorDown && !projectCalculatorAnim){
+		if(projectCalculatorDown && !projectCalculatorAnim){
 			projectCalculatorDown=false;
-		}else if(!projectCalculatorDown && !projectCalculatorAnim){
+			}else if(!projectCalculatorDown && !projectCalculatorAnim){
 			projectCalculatorDown=true;
 		}
 		projectCalculatorAnim=true;
+	})
+	
+	$('#registerButton').click(function(){
+		$('#regLog').show();
+	})
+	
+	$('#regClose').click(function(){
+		$('#regLog').hide();
 	})
 	
 	//-----< END OF JQUERY FUNCTIONS >-----
@@ -224,7 +237,6 @@ $(document).ready(function(){
 		var height2 = $('#projectsContent').outerHeight()- $(window).height();
 		if(height2<0) height2=0;
 		height *= height2/$(window).height();
-		console.log(height)
 		$('#projectsContent').css({top: -height + '%'})
 	}
 	
@@ -233,14 +245,45 @@ $(document).ready(function(){
 		var height2 = $('#informationContent').outerHeight()- $(window).height();
 		if(height2<0) height2=0;
 		height *= height2/$(window).height();
-		console.log(height)
 		$('#informationContent').css({top: -height + '%'})
+	}
+	
+	function readRegister(){
+		var element = document.getElementById("formRegister");
+		var elementText="";
+		for(var i = 0; i<element.length; i++){
+			elementText=element.elements[i].value;
+			registerImputs[i]=elementText;
+		}
+		
+		if(registerImputs[1]!=""){
+			$('#registerUsername').css('background-color', '#00ff00');
+			registerImputReady[1]=1;
+		}else{
+			$('#registerUsername').css('background-color', '#ff0000');
+			registerImputReady[1]=1;
+		}
+		if(registerImputs[2]!="" ){
+			$('#registerPassword').css('background-color', '#00ff00');
+			registerImputReady[2]=1;
+		}else{
+			$('#registerPassword').css('background-color', '#ff0000');
+			registerImputReady[2]=0;
+		}
+		if(registerImputs[3]!="" && registerImputs[3]==registerImputs[2]){
+			$('#registerPasswordConfirm').css('background-color', '#00ff00');
+			registerImputReady[3]=1;
+		}else{
+			$('#registerPasswordConfirm').css('background-color', '#ff0000');
+			registerImputReady[3]=0;
+		}
 	}
 	
 	//Updates the website for javascript functions to work correctly
 	function update(){
 		subHeader();
 		pagePositions();
+		readRegister();
 		
 		if(currentPage===1 || firstUP){
 			informationScroller();
@@ -250,16 +293,17 @@ $(document).ready(function(){
 			projectsPullDown();
 			projectScroller();
 		}
+		
 		firstUP=false;
 	}
 	
 	//This function runs the updates, and if needed, renderings in this file.
 	//Does not and should not be changed unless a Render(); function is added.
 	function run(){
-			requestAnimFrame(function(){
-				run();
-			});
-			update();
+		requestAnimFrame(function(){
+			run();
+		});
+		update();
 	}
 	run();
 });

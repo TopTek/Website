@@ -15,6 +15,12 @@ the red exclaimation points to disappear because nothing's changed there'*/
 	display: none;
 }
 
+.darken{
+	background-color: rgba(0,0,0,.75);
+	width: 100%;
+	height: 100%;
+}
+
 /*Id for the header (dark bar at the top of the website)*/
 #header{
 	background-color: #111111;
@@ -41,6 +47,83 @@ the red exclaimation points to disappear because nothing's changed there'*/
 	display: inline-block;
 	float: right;
 }
+
+#registerButton{}
+#loginButton{}
+
+#regLog{
+	top:0;
+	left:0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+#regLogContainer1{
+	top: 200px;
+	position: relative;
+	background-color: #111111;
+	border-top: 2px black solid;
+	border-bottom: 2px black solid;
+}
+
+#regLogContainer2{
+	position: relative;
+	background-color: #444444;
+	width: 600px;
+	margin: 0 auto;
+}
+
+#register{
+	border: 5px #222222 solid;
+	width: 500px;
+	opacity: 1.0;
+	float: center;
+	text-align: center;
+}
+
+#regClose{}
+
+.redX{
+	width: 32px; 
+	height: 32px; 
+	margin: 4px; 
+	cursor:pointer;
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.redX:hover{
+	width: 36px; 
+	height: 36px; 
+	margin: 2px; 
+}
+
+.formInput{
+	cursor:text;
+	padding:6px;
+	border-radius:8px;
+	width: 196px;
+	height: 28px;
+	border: 2px #000000 solid;
+	outline:none;
+}
+
+.formInput::-webkit-input-placeholder{font-family: Verdana; font-weight: bold; font-size: 12px; color:#000000;}
+.formInput::-moz-placeholder{font-family: Verdana; font-weight: bold; font-size: 12px; color:#000000;}
+.formInput:-ms-input-placeholder{font-family: Verdana; font-weight: bold; font-size: 12px; color:#000000;}
+
+
+.formInput:focus{
+	box-shadow: 0 0 1pt 1pt #000000;
+}
+
+#registerEmail{background-color: #555555;}
+#registerUsername{background-color: #555555;}
+#registerPassword{background-color: #555555;}
+#registerPasswordConfirm{background-color: #555555;}
+
 /*the Id for the pull down just below the header
 NOTE: all "subHeader..." are a part within this*/
 #subHeader{
@@ -106,7 +189,7 @@ example: we recently found out that computer club was canceled this week*/
 #informationContent{}
 
 .pageBlock{
-	height: 118px;
+	height: 108px;
 }
 
 #home{
@@ -435,4 +518,14 @@ example: we recently found out that computer club was canceled this week*/
 	display: block;
 	clear: both;
 	margin-left: 20px;
+}
+
+.textStyle14{
+	float: center;
+	padding: 6px;
+	color: #ccccff;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	font-size: 28px;
 }
