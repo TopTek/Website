@@ -387,7 +387,7 @@ example: we recently found out that computer club was canceled this week*/
 	display: inline-block;
 	padding: 6px;
 	margin: 10px 10px 10px 10px;
-	color: 6969FF;
+	color: #6969FF;
 	font-family: Verdana;
 	font-weight: bold;
 	text-align: center;
@@ -410,7 +410,7 @@ example: we recently found out that computer club was canceled this week*/
 .textStyle3:hover{
 	float: left;
 	padding: 6px;
-	color: #ccccff;
+	color: #6969FF;
 	font-family: Verdana;
 	font-weight: bold;
 	text-align: center;
