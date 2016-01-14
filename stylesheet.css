@@ -78,7 +78,7 @@ the red exclaimation points to disappear because nothing's changed there'*/
 	border: 5px #222222 solid;
 	width: 500px;
 	opacity: 1.0;
-	float: center;
+	
 	text-align: center;
 }
 
@@ -371,7 +371,6 @@ example: we recently found out that computer club was canceled this week*/
 }
 
 .textStyle2{
-
 	display: inline-block;
 	padding: 6px;
 	margin: 10px 10px 10px 10px;
@@ -419,7 +418,7 @@ example: we recently found out that computer club was canceled this week*/
 	color: 6969FF;
 }
 .textStyle4{
-	float: center;
+	
 	padding: 6px;
 	color: #111111;
 	font-family: Verdana;
@@ -454,7 +453,6 @@ example: we recently found out that computer club was canceled this week*/
 }
 
 .textStyle8{
-	float: center;
 	padding: 6px;
 	color: #111111;
 	font-family: Verdana;
@@ -521,11 +519,18 @@ example: we recently found out that computer club was canceled this week*/
 }
 
 .textStyle14{
-	float: center;
 	padding: 6px;
 	color: #ccccff;
 	font-family: Verdana;
 	font-weight: bold;
 	text-align: center;
 	font-size: 28px;
+}
+
+.homeHeader{
+	display: block;
+	text-align: center;
+	font-family: Verdana;
+	font-weight: bold;
+	color: #111111;
 }
