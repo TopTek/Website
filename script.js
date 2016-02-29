@@ -54,6 +54,14 @@ $(document).ready(function(){
 	var projectCalculatorAnimTime=0;
 	var projectCalculatorHideSpeed=1000;
 	
+	//AJAX VARIABLES
+	var xhttp;
+	if (window.XMLHttpRequest) {
+			xhttp = new XMLHttpRequest();
+		} else {
+		xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
 	//-----< BEGINNING OF THE FUNCTIONS AND END OF VARIABLES >-----
 	
 	//-----< BEGINNING OF JQUERY FUNCTION >-----
@@ -255,13 +263,19 @@ $(document).ready(function(){
 			elementText=element.elements[i].value;
 			registerImputs[i]=elementText;
 		}
-		
+		if(registerImputs[0]!=""){
+			$('#registerEmail').css('background-color', '#00ff00');
+			registerImputReady[0]=1;
+		}else{
+			$('#registerEmail').css('background-color', '#ff0000');
+			registerImputReady[0]=0;
+		}
 		if(registerImputs[1]!=""){
 			$('#registerUsername').css('background-color', '#00ff00');
 			registerImputReady[1]=1;
 		}else{
 			$('#registerUsername').css('background-color', '#ff0000');
-			registerImputReady[1]=1;
+			registerImputReady[1]=0;
 		}
 		if(registerImputs[2]!="" ){
 			$('#registerPassword').css('background-color', '#00ff00');
@@ -277,6 +291,8 @@ $(document).ready(function(){
 			$('#registerPasswordConfirm').css('background-color', '#ff0000');
 			registerImputReady[3]=0;
 		}
+		
+		
 	}
 	
 	//Updates the website for javascript functions to work correctly
